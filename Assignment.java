@@ -8,17 +8,23 @@ public class Assignment {
 
         System.out.print("Enter any Number :- ");
         int num= scanner.nextInt();
-
-        if (num % 3 == 0 && num % 5 == 0) {
-            System.out.println("Good Number");
-        } else if (num % 3 == 0 && num % 5 != 0) {
-            System.out.println("Bad Number");
-        } else if (num % 3 != 0 && num % 5 == 0) {
-            System.out.println("Poor Number");
-        } else {
-            System.out.println("-1");
+        int n =num;
+        int reverse=0;
+        int d;
+        while (n!=0) {
+            d=n%10;
+            reverse=(reverse*10)+d;
+            n=n/10;
         }
-
+        if(num==reverse)
+        {
+            System.out.println("Pallindrome Number");
+        }
+        else
+        {
+            System.out.println("Not Pallindrome Number");
+        }
+        
         scanner.close();
     }
 }
